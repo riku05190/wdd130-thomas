@@ -1,12 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    hoohidfa
-    shalom my friends
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Colors in Goldsrc Multiplayer</title>
+    <style>
+        :root {
+            --page-bg: #000000;
+            --content-bg: #4c5844;
+            --border-color: #889180;
+            --heading-color: #c4b550;
+            --text-color: #ffffff;
+            --table-color: #3e4637;
+        }
+
+        body {
+            background-color: var(--page-bg);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #container {
+            background-color: var(--content-bg);
+            border: 2px solid var(--border-color);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .logo {
+            border-right: 2px solid var(--border-color);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            height: 80px;
+            border: none; /* overrides the general img border */
+        }
+
+        nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-family: Verdana, sans-serif;
+            text-decoration: underline;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Trebuchet MS", Trebuchet, sans-serif;
+            font-weight: bold;
+            color: var(--heading-color);
+            text-align: center;
+        }
+
+        p, footer {
+            font-family: Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--heading-color);
+        }
+
+        img {
+            border: 2px solid var(--border-color);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .four-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .four-images img {
+            width: calc(50% - 10px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--table-color);
+            border: 2px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 10px;
+            color: var(--text-color);
+            font-family: Verdana, sans-serif;
+            text-align: left;
+        }
+
+        footer {
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <div class="logo">
+            <img src="images/Hl_engine_logo.png" alt="Half-Life Engine Logo">
+        </div>
+        <nav>
+            <a href="index.html">Main</a>
+            <a href="#">TFC</a>
+            <a href="#">Remapped</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Player Colors in Goldsrc Multiplayer</h1>
+
+        <p>If you’ve played any of the multiplayer games that use Valve Software’s Goldsrc engine, you may be familiar with the customization options available. These can allow you to personalize your character's appearance, changing the model and color of your character. One day, as I tend to do, I wondered if I could recreate the colors of the character I had personalized in other 3D software, such as Blender. This led me to the question: How the heck does the game actually change the colors of a character? And so the effort of my understanding has been put here, so the next hopeless chap may escape the same fate I did. Or just to be interesting.</p>
+
+        <p>First, let’s start off with how the color change looks in these games. I will be using Half Life for demonstration purposes, but most of Valve’s games in the Goldsrc engine use the same system, including Team Fortress Classic and Deathmatch Classic. But basically, a user is given 2 sliders that will change the color of your character, Primary and Secondary</p>
+
+        <div class="four-images">
+            <img src="images/hlcolordemo1.png" alt="Slider options 1">
+            <img src="images/hlcolordemo2.png" alt="Slider options 2">
+            <img src="images/hlcolordemo3.png" alt="Slider options 3">
+            <img src="images/hlcolordemo4.png" alt="Slider options 4">
+        </div>
+
+        <p>These sliders change the internal variables “topcolor” and “bottomcolor” respectively. These values can range from 0 to 255 (this will be a problem later). What these variables actually do is change the hue, and only the hue, of certain colors on the texture of the model. You see, the texture file is a .bmp file, an image file that uses a pallet to set the colors of the image. Each pixel is assigned a position on this pallet, and so changing the pallet will change the colors of the image. This is usually done to reduce the size of an image file, but Goldsrc uses this to easily change to colors of textures. This is what the pallet of the default character in Half Life multiplayer, helmet, looks like:</p>
+
+        <div class="image-container">
+            <img src="images/helmetcolors.png" alt="Pallet of the default character">
+        </div>
+
+        <p>topcolor edits the hue of these colors:</p>
+
+        <div class="image-container">
+            <img src="images/helmetcolorstop.png" alt="Topcolor hue edits">
+        </div>
+
+        <p>…and bottomcolor edits the hue of these colors:</p>
+
+        <div class="image-container">
+            <img src="images/helmetcolorsbottom.png" alt="Bottomcolor hue edits">
+        </div>
+
+        <p>As you might be able to tell, these only cover a small portion of the full colors of the textures, this is how Goldsrc only edits one part of an image!</p>
+
+        <p>Now, this is all well and good, but there are a few complications if we want our textures to look correct in another program. We could go in and edit the hue of all of the pallet slots attached to the color we want to change, but most image editing software store hues up to 360, not 255. This makes it really hard to get the exact right copy of the color we want. Thankfully, someone has already done the work for us. I believe there are a few programs that can do this, but I happen to be familiar with <a href="https://github.com/SamVanheer/HalfLifeAssetManager">Half Life Asset Manager</a>. HLAM mainly allows you to look at Goldsrc models, but it also has a full recreation of the multiplayer coloring system. After installing HLAM, open the model of your choice with it. I will be using the default helmet model again, located in your Half Life install (Half-Life/valve/models/player/helmet/helmet.mdl). After you open your file, navigate to the “Textures” tab at the bottom.</p>
+
+        <div class="image-container">
+            <!-- HLAM Textures tab image -->
+            <img src="images/hlamshowcase1.png" alt="HLAM Textures tab">
+        </div>
+
+        <p>If the model you chose supports recoloring, the texture should look red. If it doesn't, check the drop-down menu on the bottom left labeled “Textures”, and see if other texture files work, as some of them may not change colors. Now, you can mess around with the “Top Color” and “Bottom Color” sliders to set them to the colors you want. I will set them to the default colors, topcolor of 30, and bottomcolor of 6.</p>
+
+        <div class="image-container">
+            <!-- Changing colors in HLAM -->
+            <img src="images/hlamshowcase2.png" alt="Changing colors in HLAM">
+        </div>
+
+        <p>Now you have your properly colored image! All you need to do now is take a screenshot of the texture, either using your operating system’s built-in screenshot tools, or you can click on “Video” -> “Take Screenshot…” in the top right of HLAM. Make sure the “Texture Scale” on the bottom left is set to 1, otherwise your image will be too big. After you’ve taken your screenshot, crop the image to only contain the texture. You should end up with something like this:</p>
+
+        <div class="image-container">
+            <img src="images/remapped_player.png" alt="Cropped texture screenshot">
+        </div>
+
+        <p>This is really the end of most of our work. If you want to use these colors in a different program, simply swap out the original texture with your colored one. The exact process for this is different for every program, but I will quickly show you how to do it in Blender. I should note that I am in no way a Blender expert, nor am I even a competent Blender user, but I know how to do this specific thing. First, import helmet.mdl (or the model of your choice) to Blender using SourceIO. Then navigate to the “Texture Paint” tab. Click on “Image” -> “Open…” like so:</p>
+
+        <div class="image-container">
+            <img src="images/blendershowcase1.png" alt="Blender Texture Paint tab">
+        </div>
+
+        <p>Open your colored image. This will import the image into Blender. Next, navigate to the “Shading” tab. At the bottom, there should be a node labeled “$basetexture”. Click on the image dropdown and select your imported image.</p>
+
+        <div class="image-container">
+            <img src="images/blendershowcase2.png" alt="Blender Shading tab">
+        </div>
+
+        <p>And there you go! Your model is properly recolored. Now go make something cool!</p>
+
+        <div class="image-container">
+            <img src="images/0000-0047.gif" alt="Final recolored model in Blender">
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright</p>
+    </footer>
+</div>
+
+</body>
 </html>
