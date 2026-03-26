@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Fortress Classic Colors</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #container {
+      background-color: #4c5844;
+      border: 2px solid #889180;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #889180;
+    }
+
+    .logo {
+      border-right: 2px solid #889180;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    nav {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      font-family: Verdana, sans-serif;
+      text-decoration: underline;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Trebuchet MS", sans-serif;
+      color: #c4b550;
+      text-align: center;
+    }
+
+    p {
+      font-family: Verdana, sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #c4b550;
+    }
+
+    img {
+      border: 2px solid #889180;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #3e4637;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #889180;
+      padding: 10px;
+      color: white;
+      font-family: Verdana, sans-serif;
+    }
+
+    th {
+      color: #c4b550;
+    }
+
+    .note-box {
+      border: 2px solid #889180;
+      background-color: #3e4637;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    footer {
+      border-top: 2px solid #889180;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <div class="logo">
+        <img src="images/Hl_engine_logo.png" alt="Half-Life Engine Logo">
+      </div>
+      <nav>
+        <a href="index.html">Main</a>
+        <a href="tfc.html">TFC</a>
+        <a href="remapped.html">Remapped</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Team Fortress Classic Colors</h1>
+
+      <p>
+        A quick side section relating to Team Fortress Classic. If you've played Team Fortress 2,
+        you may be familiar with how that game handles team colors, which is to say, it uses
+        separate textures for its different teams. TFC does not do this. Instead it uses preset
+        colors for every team built directly into the topcolor and bottomcolor system.
+      </p>
+
+      <p>
+        For most classes, I will provide all of the different color values here on this page.
+        However, I should note that the colors used change depending on if you are using the old
+        model or the new model. Old models only use one shared set of colors that is used for
+        each team. New models, on the other hand, have unique values for each class.
+      </p>
+
+      <h2>Old Model Colors (Same for Every Class)</h2>
+
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>153</td>
+          <td>255</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>140</td>
+          <td>240</td>
+          <td>35</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h2>New Model Colors (Different for Each Class)</h2>
+
+      <h3>Scout</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>153</td>
+          <td>255</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>159</td>
+          <td>10</td>
+          <td>35</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h3>Sniper</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>153</td>
+          <td>255</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>145</td>
+          <td>10</td>
+          <td>35</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h3>Soldier</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>153</td>
+          <td>250</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>130</td>
+          <td>25</td>
+          <td>35</td>
+          <td>40</td>
+        </tr>
+      </table>
+
+      <h3>Demoman</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>152</td>
+          <td>255</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>145</td>
+          <td>20</td>
+          <td>35</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h3>Heavy Weapons Guy</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>148</td>
+          <td>255</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>138</td>
+          <td>25</td>
+          <td>40</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h3>Pyro</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>140</td>
+          <td>250</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>145</td>
+          <td>25</td>
+          <td>35</td>
+          <td>50</td>
+        </tr>
+      </table>
+
+      <h3>Spy</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>145</td>
+          <td>250</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>150</td>
+          <td>240</td>
+          <td>35</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <h3>Engineer</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>Blue Team</th>
+          <th>Red Team</th>
+          <th>Yellow Team</th>
+          <th>Green Team</th>
+        </tr>
+        <tr>
+          <td>topcolor</td>
+          <td>110</td>
+          <td>5</td>
+          <td>45</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>bottomcolor</td>
+          <td>148</td>
+          <td>250</td>
+          <td>45</td>
+          <td>90</td>
+        </tr>
+      </table>
+
+      <div class="note-box">
+        <p>
+          <strong>Note:</strong> Civilian only has old model colors, so it will always use the same values
+          listed in the first table.
+        </p>
+      </div>
+
+      <h2>Character Preview</h2>
+
+      <p>
+        When creating a custom character for TFC, it helps to have a preview image shown in the
+        menu so you can see what your character will look like. These images are produced using
+        the same method as the character textures, but giving your hands on the remapped texture is
+        much easier.
+      </p>
+
+      <p>
+        If you want to make a preview image for your game install folder, depending on the game,
+        you will need to go into a game specific folder. Half-Life is valve. Team Fortress is
+        tfc. Deathmatch Classic is dmc, and so on. Then go to
+        models/player. The remapped bitmap is the file you will be looking for.
+      </p>
+
+      <div class="image-container">
+        <img src="images/remapped_player.png" alt="Example remapped player texture">
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
