@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Preview - Goldsrc</title>
+    <style>
+        :root {
+            --page-bg: #000000;
+            --content-bg: #4c5844;
+            --border-color: #889180;
+            --heading-color: #c4b550;
+            --text-color: #ffffff;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: var(--page-bg);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+            min-height: 100%;
+        }
+
+        #container {
+            background-color: var(--content-bg);
+            border: 2px solid var(--border-color);
+            max-width: 900px;
+            width: 100%;
+            min-height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .logo {
+            border-right: 2px solid var(--border-color);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            height: 80px;
+            border: none; /* overrides the general img border */
+        }
+
+        nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-family: Verdana, sans-serif;
+            text-decoration: underline;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Trebuchet MS", Trebuchet, sans-serif;
+            font-weight: bold;
+            color: var(--heading-color);
+            text-align: center;
+        }
+
+        p, footer {
+            font-family: Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--heading-color);
+        }
+
+        img {
+            border: 2px solid var(--border-color);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .character-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content:center;
+            align-items: center;
+            margin: 20px 0;
+            
+        }
+
+        footer {
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <header>
+        <div class="logo">
+            <img src="images/Hl_engine_logo.png" alt="Half-Life Engine Logo">
+        </div>
+        <nav>
+            <a href="index.html">Main</a>
+            <a href="tfc.html">TFC</a>
+            <a href="#">Remapped</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Character Preview</h1>
+
+        <p>When creating a custom character in Goldsrc, there is a preview image shown in the menu to allow you to see what your character will look like. These images are produced using the same method as the character textures, but getting your hands on the remapped texture is much easier. In fact, Goldsrc will do it for you. After you have saved your character, exit the game and navigate to your game install folder. Depending on the game, you will then need to go into a game specific folder. Half-Life is /valve, Opposing Force is /gearbox, Team Fortress is /tfc, Deathmatch Classic is /dmc, and so on. Then go to models/player, remapped.bmp is the file you’re looking for.</p>
+
+        <div class="character-layout">
+            <img src="images/remapped_player.png" alt="Example remapped player texture">
+            <p>You also can find your colored spray in your game folder, under /logos. The spray will be named remapped.bmp.</p>
+            <img src="images/remapped_spray.png" alt="Example remapped player texture">
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright</p>
+    </footer>
+</div>
+
+</body>
+</html>
